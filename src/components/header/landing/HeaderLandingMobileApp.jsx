@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Scrollspy from "react-scrollspy";
-import { Link } from "react-router-dom";
-import MegaMenuLanding from "../../header/mega-menu/MegaMenuLanding";
+import React, { useState } from 'react';
+import Scrollspy from 'react-scrollspy';
+import { Link } from 'react-router-dom';
+import MegaMenuLanding from '../../header/mega-menu/MegaMenuLanding';
 
 const HeaderLandingMobileApp = () => {
   // For header select menu
@@ -21,7 +21,7 @@ const HeaderLandingMobileApp = () => {
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  window.addEventListener('scroll', changeBackground);
 
   return (
     <>
@@ -31,23 +31,22 @@ const HeaderLandingMobileApp = () => {
       <div
         className={
           navbar
-            ? "theme-main-menu sticky-menu theme-menu-five fixed"
-            : "theme-main-menu sticky-menu theme-menu-five"
-        }
-      >
-        <div className="d-flex align-items-center justify-content-center">
-          <div className="logo">
-            <Link to="/doc-landing">
-              <img src="images/logo/deski_06.svg" alt="brand" />
+            ? 'theme-main-menu sticky-menu theme-menu-five fixed'
+            : 'theme-main-menu sticky-menu theme-menu-five'
+        }>
+        <div className='d-flex align-items-center justify-content-center'>
+          <div className='logo'>
+            <Link to='/doc-landing'>
+              <img src='images/logo/deski_06.svg' alt='brand' />
             </Link>
           </div>
           {/* End logo */}
 
-          <nav id="mega-menu-holder" className="navbar navbar-expand-lg">
-            <div className="container nav-container">
-              <div className="mob-header">
-                <button className="toggler-menu" onClick={handleClick}>
-                  <div className={click ? "active" : ""}>
+          <nav id='mega-menu-holder' className='navbar navbar-expand-lg'>
+            <div className='container nav-container'>
+              <div className='mob-header'>
+                <button className='toggler-menu' onClick={handleClick}>
+                  <div className={click ? 'active' : ''}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,53 +56,33 @@ const HeaderLandingMobileApp = () => {
               {/* End Header */}
 
               <div
-                className="navbar-collapse collapse landing-menu-onepage"
-                id="navbarSupportedContent"
-              >
-                <div className="d-lg-flex justify-content-between align-items-center">
+                className='navbar-collapse collapse landing-menu-onepage'
+                id='navbarSupportedContent'>
+                <div className='d-lg-flex justify-content-between align-items-center'>
                   <Scrollspy
-                    className="navbar-nav  main-side-nav font-gordita"
-                    items={[
-                      "home",
-                      "product",
-                      "features",
-                      "pricing",
-                      "feedback",
-                    ]}
-                    currentClassName="active"
-                    offset={-90}
-                  >
-                    <li className="nav-item dropdown position-static">
-                      <a
-                        className="nav-link dropdown-toggle"
-                        href="#home"
-                        data-toggle="dropdown"
-                      >
-                        Home
-                      </a>
-                      <div className="dropdown-menu">
-                        <MegaMenuLanding />
-                      </div>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#product" className="nav-link">
-                        Product
+                    className='navbar-nav  main-side-nav font-gordita'
+                    items={['home', 'product', 'features', 'feedback']}
+                    currentClassName='active'
+                    offset={-90}>
+                    <li className='nav-item  position-static'>
+                      <a className='nav-link ' href='#home'>
+                        Anasayfa
                       </a>
                     </li>
-                    <li className="nav-item">
-                      <a href="#features" className="nav-link">
-                        Features
+                    <li className='nav-item'>
+                      <a href='#product' className='nav-link'>
+                        Portfolyo
+                      </a>
+                    </li>
+                    <li className='nav-item'>
+                      <a href='#features' className='nav-link'>
+                        Hizmetler
                       </a>
                     </li>
 
-                    <li className="nav-item">
-                      <a href="#pricing" className="nav-link">
-                        Pricing
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#feedback" className="nav-link">
-                        Feedback
+                    <li className='nav-item'>
+                      <a href='#feedback' className='nav-link'>
+                        İletişim
                       </a>
                     </li>
                   </Scrollspy>
@@ -113,93 +92,45 @@ const HeaderLandingMobileApp = () => {
           </nav>
           {/* End Navbar */}
 
-          <div className="right-widget">
-            <ul className="d-flex align-items-center">
-              <li>
-                <div
-                  className={
-                    click1
-                      ? "dropdown download-btn style-two show"
-                      : "dropdown download-btn style-two"
-                  }
-                >
-                  <button
-                    className="dropdown-toggle"
-                    onClick={handleClick1}
-                    type="button"
-                  >
-                    Download
-                  </button>
-                  <div
-                    className={click1 ? "dropdown-menu  show" : "dropdown-menu"}
-                  >
-                    <a
-                      className="dropdown-item d-flex align-items-center"
-                      href="#"
-                      onClick={handleClick1}
-                    >
-                      <img src="images/icon/103.svg" alt="icon" />
-                      <span>IOS & Android</span>
-                    </a>
-                    <a
-                      className="dropdown-item d-flex align-items-center"
-                      href="#"
-                      onClick={handleClick1}
-                    >
-                      <img src="images/icon/104.svg" alt="icon" />
-                      <span>Mac & Windows</span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
           {/* End right-widget */}
         </div>
       </div>
-      {/* /.theme-main-menu */}
-
+      *{/* /.theme-main-menu */}
       {/* Mobile Menu Start */}
-      <div className={click ? "mobile-menu  menu-open" : "mobile-menu"}>
-        <div className="logo order-md-1">
-          <Link to="/doc-landing">
-            <img src="images/logo/deski_06.svg" alt="brand" />
+      <div className={click ? 'mobile-menu  menu-open' : 'mobile-menu'}>
+        <div className='logo order-md-1'>
+          <Link to='/doc-landing'>
+            <img src='images/logo/deski_06.svg' alt='brand' />
           </Link>
-          <div className="fix-icon text-dark" onClick={handleClick}>
-            <img src="images/icon/close.svg" alt="icon" />
+          <div className='fix-icon text-dark' onClick={handleClick}>
+            <img src='images/icon/close.svg' alt='icon' />
           </div>
           {/* Mobile Menu close icon */}
         </div>
 
         <Scrollspy
-          className="navbar-nav  main-side-nav font-gordita"
-          items={["home", "product", "features", "pricing", "feedback"]}
-          currentClassName="active"
-          offset={-90}
-        >
-          <li className="nav-item">
-            <a href="#home" className="nav-link" onClick={handleClick}>
+          className='navbar-nav  main-side-nav font-gordita'
+          items={['home', 'product', 'features', 'feedback']}
+          currentClassName='active'
+          offset={-90}>
+          <li className='nav-item'>
+            <a href='#home' className='nav-link' onClick={handleClick}>
               Home
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#product" className="nav-link" onClick={handleClick}>
+          <li className='nav-item'>
+            <a href='#product' className='nav-link' onClick={handleClick}>
               Product
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#features" className="nav-link" onClick={handleClick}>
+          <li className='nav-item'>
+            <a href='#features' className='nav-link' onClick={handleClick}>
               Features
             </a>
           </li>
 
-          <li className="nav-item">
-            <a href="#pricing" className="nav-link" onClick={handleClick}>
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#feedback" className="nav-link" onClick={handleClick}>
+          <li className='nav-item'>
+            <a href='#feedback' className='nav-link' onClick={handleClick}>
               Feedback
             </a>
           </li>
